@@ -1,15 +1,21 @@
-import About from "../../client/src/pages/About";
-import Contact from "../../client/src/pages/Contact";
-import Home from "../../client/src/pages/Home";
-import Projects from "../../client/src/pages/Projects";
+import React, { useState, useEffect } from "react";
 
 export default function App(){
-  return(
-    <>
-    <About />
-    <Contact />
-    <Home />
-    <Projects />
-    </>
+  
+  const [ message, setMessage ] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/hello")
+         .then(res => res.json())
+         .then(data => setMessage(data.message))
+         .catch(err => console.error(err))
+  }, []);
+
+  return (
+    <React.Fragment>
+    <h1>Asma portfolio</h1>
+    <p>{message}</p>
+    </React.Fragment>
   )
+
 }
