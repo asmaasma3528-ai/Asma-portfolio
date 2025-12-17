@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Contact from ".././src/pages/Contact"; 
 
 
-
 export default function App(){
   
   const [ message, setMessage ] = useState("");

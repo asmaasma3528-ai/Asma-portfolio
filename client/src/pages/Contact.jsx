@@ -36,56 +36,77 @@ const handleSubmit = async(e) => {
 }
 
 return(
-  <div>
-    <h2>Contact me 😊</h2>
-    {success && <p>{success}</p>}
-    <form onSubmit = {handleSubmit}>
-    <h6>Name</h6>
-    <input 
-    type="text"
-    name="name"
-    placeholder="Your name"
-    value={form.name}
-    onChange={handleChange}
-    />
+  <div className="container mt-5 bg-warning form-control rounded">
+  <div className="row g-5">
 
-    <h6>Email</h6>
-    <input 
-    type="email"
-    name="email"
-    placeholder="Your email"
-    value={form.email}
-    onChange={handleChange}
-    />
+    <div className="col-md-6">
+      <h2 className="mb-3 text-warning">Contact Me</h2>
 
-    <h6>Message</h6>
-    <textarea 
-    name="message"
-    placeholder="Please write a message here..."
-    value={form.message}
-    onChange={handleChange}
-    />
+      {success && (
+        <div className="alert alert-success">{success}</div>
+      )}
 
-    <button type="submit">Send</button>
-    </form>
-
-    <hr />
-
-    {contacts.length === 0 ? (
-      <h1>No messages yet 📭</h1>
-    ) : (
-      <div>
-      <h2>Connections</h2>
-      {contacts.map((c) => (
-        <div key = {c._id}>
-        <strong>{c.name}</strong><br />
-        <small>{c.email}</small>
-        <p>{c.message}</p>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label className="form-label">Name</label>
+          <input
+            className="form-control"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+          />
         </div>
-      ))}
+
+        <div className="mb-3">
+          <label className="form-label">Email</label>
+          <input
+            className="form-control"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Message</label>
+          <textarea
+            className="form-control"
+            rows="4"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+          />
+        </div>
+
+        <button className="btn btn-primary fw-bold">
+          Send
+        </button>
+      </form>
     </div>
-    )}
+
+    <div className="col-md-6">
+      <h2 className="text-info mb-3">Connections</h2>
+
+      {contacts.length === 0 ? (
+        <p className="text-light">No messages yet 📭</p>
+      ) : (
+        contacts.map((c) => (
+          <div key={c._id} className="card mb-3 bg-dark text-light">
+            <div className="card-body">
+              <h5 className="card-title">{c.name}</h5>
+              <h6 className="card-subtitle mb-2 text-muted">{c.email}</h6>
+              <p className="card-text">{c.message}</p>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+
   </div>
+</div>
+
 )
 
 }

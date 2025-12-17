@@ -18,10 +18,10 @@ app.use(express.json());
 app.use("/api/contact", contactRouter);
 
 //test api call
-app.get("/api/hello", (req, res) => {
-    res.json({message:"This is my server port running 😍"});
-});
+// app.get("/api/hello", (req, res) => {
+//     res.json({message:"This is my server port running 😍"});
+// });
 
 app.listen(PORT, () => {
-    console.log(`The app is listening on the port ${PORT}`);
-})
+  console.log(`The app is listening on the port ${PORT}`);
+});
