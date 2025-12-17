@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Contact from ".././src/pages/Contact"; 
+
+
 
 export default function App(){
   
@@ -15,6 +18,7 @@ export default function App(){
     <React.Fragment>
     <h1>Asma portfolio</h1>
     <p>{message}</p>
+    <Contact />
     </React.Fragment>
   )
 
