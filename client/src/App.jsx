@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Contact from ".././src/pages/Contact"; 
+import Navbar from "../src/components/Navbar.jsx";
+import Home from "../src/pages/Home.jsx";
+import About from "../src/pages/About.jsx";
+import Projects from "../src/pages/Projects.jsx";
+import Skills from "../src/pages/skills.jsx";
 
+import "../src/styles/app.css";
 
 export default function App(){
   
@@ -15,9 +21,27 @@ export default function App(){
 
   return (
     <React.Fragment>
-    <h1>Asma portfolio</h1>
+    <Navbar />
     <p>{message}</p>
+    <section id="home">
+    <Home />
+    </section>
+
+    <section id="about">
+    <About />
+    </section>
+
+    <section id = "skills">
+      <Skills />
+    </section>
+
+    <section id = "projects">
+    <Projects />
+    </section>
+
+    <section id = "contact">
     <Contact />
+    </section>
     </React.Fragment>
   )
 

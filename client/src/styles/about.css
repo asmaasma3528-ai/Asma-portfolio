@@ -1,0 +1,15 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Make your headings pop */
+.card-title {
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Makes modern fonts look even better */
+}
+
+/* Make your list info readable */
+.list-group-item {
+  font-weight: 300;
+  font-size: 0.95rem;
+}

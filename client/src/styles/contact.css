@@ -1,0 +1,4 @@
+.smooth:hover,
+.smooth:focus {
+  transform: scale(1.03);
+}
