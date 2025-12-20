@@ -7,6 +7,7 @@ import Projects from "../src/pages/Projects.jsx";
 import Skills from "../src/pages/skills.jsx";
 
 import "../src/styles/app.css";
+import Footer from "../src/components/Footer.jsx";
 
 export default function App(){
   
@@ -41,6 +42,10 @@ export default function App(){
 
     <section id = "contact">
     <Contact />
+    </section>
+
+    <section>
+      <Footer />
     </section>
     </React.Fragment>
   )
