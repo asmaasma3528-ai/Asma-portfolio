@@ -65,7 +65,7 @@ export default function Projects() {
     <div className="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-between">
       
       <div className="flex-grow-1">
-        <h5 className="card-title fw-bold mb-1 text-warning">Grocery Inventory Manager</h5>
+        <h5 className="card-title fw-bold mb-1 text-dark">Grocery Inventory Manager</h5>
         <p className="card-text mb-1">
           Developed a state-managed inventory tool using the <strong>React Context API</strong>. 
           Features include real-time item addition/deletion and a live total product counter 
